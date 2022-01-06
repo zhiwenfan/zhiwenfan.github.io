@@ -92,17 +92,17 @@
       <img style="width: 80%;max-width: 320px" alt="profile photo" src="images/selfi.jpg">
       <h1>Zhiwen Fan</h1>
         <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
-          I am a Ph.D. student in Electrical Engineering at The University of Texas at Austin advised by <a href="https://spark.adobe.com/page/CAdrFMJ9QeI2y/">Prof. Atlas Wang</a> at <a href="https://vita-group.github.io/">Visual Informatics @ UT Austin (VITA) group</a>.
+          I am a Ph.D. student in Electrical Engineering at The University of Texas at Austin advised by <a href="https://spark.adobe.com/page/CAdrFMJ9QeI2y/">Prof. Atlas Wang</a> at <a href="https://vita-group.github.io/">VITA group</a>.
           </br>
-          Previously, I was senior algorithm engineer at <a href="https://ailab.aliyun.com/">Alibaba Cloud A.I Labs</a> worked with <a href="https://scholar.google.com/citations?user=XhyKVFMAAAAJ&hl=en">Prof. Ping Tan</a> and <a href="https://sites.google.com/site/zhusiyucs/home">Siyu Zhu</a>.
+          Previously, I was senior algorithm engineer at <a href="https://ailab.aliyun.com/">Alibaba Cloud</a> worked with <a href="https://scholar.google.com/citations?user=XhyKVFMAAAAJ&hl=en">Prof. Ping Tan</a> and <a href="https://sites.google.com/site/zhusiyucs/home">Siyu Zhu</a>.
           <!-- </br> -->
           <!-- I did my M.S. at school of information, <a href="https://www.xmu.edu.cn/">Xiamen University</a> supervised by Prof. <a href="https://informatics.xmu.edu.cn/info/1011/6625.htm">Xinghao Ding</a>. -->
   <!-- where I work on deep learning and computer vision, etc. -->
         </p>
         <p class="w3-center">
           <a href="images/Zhiwen_Fan_CV.pdf">CV</a> &nbsp;/&nbsp;
-          <a href="mailto:waynefan@stu.xmu.edu.cn">Email</a> &nbsp;/&nbsp;
-          <a href="https://scholar.google.com/citations?user=tdoBO3UAAAAJ&hl=nl">Google Scholar</a> &nbsp;
+          <a href="mailto:zhiwenfan@utexas.edu">Email</a> &nbsp;/&nbsp;
+          <a href="https://scholar.google.com/citations?user=tdoBO3UAAAAJ&hl">Google Scholar</a> &nbsp;
           <!-- <a href="https://www.zhihu.com/people/YunheWang"> Zhi Hu </a> &nbsp;/&nbsp; -->
           <!-- <a href="https://dblp.org/pid/63/8217-1.html"> DBLP </a> -->
         </p>
@@ -135,10 +135,14 @@
       <a style="color: #447ec9" href="https://floorplancad.github.io/">Project Page</a> and <a style="color: #447ec9" href="https://www.aliyun.com/product/ai/HoloWatcher_Introduction">Product Page</a>
       </p>
       <p class="w3-justify">
-        We release the first a large-scale real-world dataset of over 10,000 CAD drawings with line-grained annotations, covering various types of builds.
-        We also introduce the task of <span style="color:red">panoptic symbol spotting</span>, which is a relaxation of the traditional symbol spotting problem.
-        By proposing a CNN-GCN method, we build a unified baseline network for the panoptic symbol spotting task.
-      This work can be used integrated in CAD layer analytics in architecture, engineering and construction (AEC) industries to accelerate the efficiency of 3D modeling.
+        This work can be used integrated in CAD layer analytics in architecture, engineering and construction (AEC) industries to accelerate the efficiency of 3D modeling.
+        <br>
+        We release the first large-scale real-world dataset of over 10,000 CAD drawings with line-grained annotations, covering various types of builds. This dataset can be used in architecture, engineering and construction (AEC) industries to accelerate the efficiency of 3D modeling.
+        We introduce the task of <span style="color:red">panoptic symbol spotting</span>, which is a relaxation of the traditional symbol spotting problem. Moreover, we propose the Panoptic Quality (PQ) as the evaluation criteria of panotic symbol spotting results. 
+        <br>
+        We first propose a CNN-GCN method in <a href=https://arxiv.org/abs/2105.07147>ICCV2021</a> which unified a GCN head and a detection head for semantic and instance symbol spotting respectively. 
+        Recently, we present a novel framework named <span style="color:red">CADTransformer</span> by painlessly modifying existing vision transformer (ViT)
+        backbones to tackle the panoptic symbol spotting task. The PQ is boosted from 0.595 in the GCN-CNN based methods to a new state-of-the-art <span style="color:red">0.685</span>.
       </p> 
 
       <h4><li>Efficient Multi-view Stereo and Stereo Matching</li></h4>
@@ -147,21 +151,31 @@
       <!-- <a style="color: #447ec9" href="https://live.huawei.com/huaweiconnect/meeting/cn/5872.html">Huawei Connect (HC) 2020</a> | <a style="color: #447ec9" href="https://www.mindspore.cn/resources/hub">MindSpore Hub</a> -->
       </p>
       <p class="w3-justify">
-        Recent Multi-view Stereo(MVS) deep models are memory consuming due to the 3D convolution layers when aggregating the cost volume, 
-      we proposed a memory and time efficient cost volume formulation which is built upon a standard feature pyramid encoding geometry and context at gradually finer scales，
-        Also, we narrow the depth (or disparity) range of each stage by the depth (or disparity) map from the previous stage to recover the output in a coarser to fine manner.
-        We apply the cascade cost volume to the representative MVS-Net, and obtain a <span style="color:red">23.1%</span> improvement on DTU benchmark (1st place), 
-      with <span style="color:red">50.6%</span> and <span style="color:red">74.2%</span> reduction in GPU memory and run-time. It is also the state-of-the-art learning-based method on Tanks and Temples benchmark.
+        We propose a memory and run time efficient cost volume formulation which is built upon a standard feature pyramid encoding geometry and context at gradually finer scales. 
+        We further narrow the depth (or disparity) range of each stage by the depth (or disparity) map from the previous stage to recover the output in a coarser to fine manner.
+        We apply the cascade cost volume to the representative MVS-Net, and obtain a <span style="color:red">23.1%</span> improvement on
+        <a href=http://roboimagedata.compute.dtu.dk/?page_id=36>DTU dataset</a>  with <span style="color:red">50.6%</span> and <span style="color:red">74.2%</span> reduction in GPU memory and run-time.
+        It is also rank 1st within all learning-based methods on <a href=https://www.tanksandtemples.org/>Tanks and Temples benchmark</a>.
+        <br>
+        In addition, we adapt GwcNet with our proposed cost volume design, and the accuracy ranking rises from 29 to 17 with <span style="color:red">37.0%</span> memory reduction on
+        <a href=http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo>KITTI 2015 test set</a>. See<a href=https://arxiv.org/abs/1912.06378> CVPR2020</a> for more details.
       </p> 
 
-      <!-- <h4><li>AI on Ascend: Real-Time Video Style Transfer</li></h4>
-      <img style="width:32%;" src="images/atlas200.png"> &nbsp;&nbsp; <img style="width:60%;" src="images/video.gif">
+      <h4><li>Compressed Sensing MRI and Image Deraining</li></h4>
+      <img style="width:96%;" src="images/csmri.png"> 
       <p class="w3-justify">
-      <a style="color: #447ec9" href="https://www.huaweicloud.com/intl/en-us/HDC.Cloud.html">Huawei Developer Conference (HDC) 2020</a> | <a style="color: #447ec9" href="https://developer.huaweicloud.com/exhibition/Atlas_neural_style.html">Online Demo</a>
+      <!-- <a style="color: #447ec9" href="https://live.huawei.com/huaweiconnect/meeting/cn/5872.html">Huawei Connect (HC) 2020</a> | <a style="color: #447ec9" href="https://www.mindspore.cn/resources/hub">MindSpore Hub</a> -->
       </p>
       <p class="w3-justify">
-      This project aims to develop a video style transfer system on the <strong>Huawei Atlas 200 DK AI developer Kit</strong>. The latency of the original model for processing one image is about <span style="color:red">630ms</span>. After accelerating it using our method, the lantency now is about <span style="color:red">40ms</span>. 
-      </p>   -->
+        I have also worked on low-level computer vision tasks (e.g. Compressed Sensing MRI and Single Image Deraining) using Deep Neural Network before the year 2019.
+        See <a style="color: #447ec9" href="https://arxiv.org/abs/1805.02165">IPMI2019</a>,  
+        <a style="color: #447ec9" href="https://arxiv.org/abs/1804.07493">ACM MM2019</a>,
+        <a style="color: #447ec9" href="https://openaccess.thecvf.com/content_ECCV_2018/html/Zhiwen_Fan_A_Segmentation-aware_Deep_ECCV_2018_paper.html">ECCV 2018</a>,
+        <a style="color: #447ec9" href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewPaper/16546">AAAI 2018</a> and 
+        <a style="color: #447ec9" href="https://ieeexplore.ieee.org/abstract/document/8758456/">TIP 2019</a>,
+        <a style="color: #447ec9" href="https://www.sciencedirect.com/science/article/abs/pii/S0730725X19301870">MRI 2019</a>,
+        <a style="color: #447ec9" href="https://www.sciencedirect.com/science/article/abs/pii/S0730725X1830674X">MRI 2019</a> for details.
+      </p> 
 
 </div>
 
@@ -177,7 +191,7 @@
   <div class="w3-container w3-padding-32"" id="publications">
     <h2>Research</h2>
       <p class="w3-left-align" style="line-height:200%">
-        I'm interested in devleoping models for <strong>3D Reconstruction</strong>, <strong>Graph Convolution</strong> for vector graphics and 3D data, <strong>Low-level Computer Vision</strong>.
+        I'm interested in devleoping <strong>Neural Radiance Field</strong>, <strong>Efficient 3D Models</strong>, <strong>Graph Neural Networks</strong> for vector graphics and 3D data and <strong>Low-level Computer Vision</strong>.
       </p>
     <h4> Conference Papers:</h4>
 
@@ -185,7 +199,7 @@
       <p>
         <li><strong>MeshMVS: Multi-View Stereo Guided Mesh Reconstruction</strong>
         <br>
-        Rakesh Shrestha, <strong>Zhiwen Fan*</strong>, Qingkun Su, Zuozhuo Dai, Siyu Zhu, Ping Tan
+        Rakesh Shrestha, <strong>Zhiwen Fan</strong>, Qingkun Su, Zuozhuo Dai, Siyu Zhu, Ping Tan
         <br>
         <em>3DV</em> 2021 | <a style="color: #447ec9" href="https://arxiv.org/abs/2010.08682">paper</a> | <a style="color: #447ec9" href="https://github.com/rakeshshrestha31/meshmvs">code</a>
       </p>
@@ -295,8 +309,8 @@
     <h2>Services</h2>
       <!-- <p><li> Area Chair of <a href="https://icml.cc/Conferences/2021">ICML 2021</a>, <a href="https://nips.cc/Conferences/2021/">NeurIPS 2021</a>.</p> -->
       <!-- <p><li> Senior Program Committee Members of <a href="https://ijcai-21.org/">IJCAI 2021</a>, <a href="https://www.ijcai20.org/">IJCAI 2020</a> and <a href="https://www.ijcai19.org/program-committee.html">IJCAI 2019</a>.</p> -->
-      <p><li> Journal Reviewers of <a href="https://www.springer.com/journal/11263">IJCV</a>, Neurocomputing</p>
-      <p><li> Conference Reviewers of CVPR2022, ICCV2021, AAAI 2021, ICME2019</p>
+      <p><li> Journal Reviewers of IJCV, Neurocomputing</p>
+      <p><li> Conference Reviewers of ICML 2022, CVPR 2022, ICCV 2021, AAAI 2021, ICME 2019</p>
   </div>
 
   <!-- The Awards Section -->
