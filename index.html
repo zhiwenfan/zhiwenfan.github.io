@@ -130,6 +130,30 @@
   <h2>Recent Projects</h2>
   <p class="w3-justify">
   </p>
+  <h4><li>Neural Radiance Field</li></h4>
+      <img style="width:30%;" src="./images/sinnerf_lego.gif"> <img style="width:30%;" src="./images/ours_lego_inter.gif">  <img style="width:30%;" src="./images/ours_room.gif"> 
+      <p class="w3-justify">
+        Synthesizing photo-realistic images has been one of the most essential goals in the area of computer vision.
+        <br>
+        <p>
+          <strong>NeRF Augmentations:</strong> NeRF often yields inconsistent and visually non-smooth geometric results due to the generalization gap between seen and unseen views. We propose to blend 
+          triple level worest-case perturbations to the NeRF training pipeline with physical grouds. In our <u>Aug-NeRF</u> paper, we effectively boosts NeRF accuracy in both novel view synthesis (up to 1.5dB
+          PSNR gain) and underlying geometry reconstruction.
+         </p>
+
+        <p>
+         <strong>Single view NeRF:</strong> NeRF is impeded by the stringent requirement of the dense views captured from multiple well-calibrated cameras, whereas it could be challenging or even infeasible to collect a sufficiently dense coverage of 
+        a scene. In our <u>SinNeRF</u> paper, We push the setting of sparse views to the extreme, by training a neural radiance field on only one view with depth information. 
+        By generating pseudo labels according to the available single view, the learned radiance field generate more satisfying synthesized results on novel views.
+        </p>
+
+        <strong>NeRF Stylizatation:</strong> In addtion to improve the synthesized image quality, in our <u>INS</u> paper, we conduct a pilot study for training stylized implicit representations (e.g., SIREN, NeRF, SDF) 
+        We propose to decouples the ordinary implicit function into a style implicit module and a content implicit module, in order to separately encode the representations from the style image and input
+        scene. An amalgamation module is then applied to aggregate these information and synthesize the stylized output. Consequently, we can synthesize faithful stylization for SIREN, NeRF and SDF. In addition, 
+        we can interpolate between different styles and generating images with new mixed style.
+      </p> 
+
+  
       <h4><li>CAD(computer-aided design) Drawing Symbol Spotting</li></h4>
       <img style="width:96%;" src="images/floorplan_annotation.png"> 
       <p class="w3-justify"> 
@@ -196,6 +220,26 @@
       <p class="w3-left-align" style="line-height:200%">
         I'm interested in devleoping <strong>Neural Radiance Field</strong>, <strong>Efficient 3D Models</strong>, <strong>Graph Neural Networks</strong> for vector graphics and 3D data and <strong>Low-level Computer Vision</strong>.
       </p>
+    
+    <h4> Arxiv Submissions:</h4>
+    <ol>
+      <p>
+        <li><strong>Unified Implicit Neural Stylization</strong>
+        <br>
+        <strong>Zhiwen Fan*</strong>, Yifan Jiang*, Peihao Wang*, Xinyu Gong, Dejia Xu, Zhangyang Wang.
+        <br>
+        <em>Arxiv</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/2204.01943">paper</a>  | <a style="color: #447ec9" href="https://zhiwenfan.github.io/INS/">project page</a>| <a style="color: #447ec9" href="https://github.com/VITA-Group/INS">code</a>
+      </p>
+
+      <p>
+        <li><strong>SinNeRF: Training Neural Radiance Fields on Complex Scenes from a Single Image</strong>
+        <br>
+        Dejia Xu*, Yifan Jiang*, Peihao Wang,  <strong>Zhiwen Fan</strong>, Humphrey Shi, Zhangyang Wang.
+        <br>
+        <em>Arxiv</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/2204.00928">paper</a>  | <a style="color: #447ec9" href="https://vita-group.github.io/SinNeRF/">project page</a>| <a style="color: #447ec9" href="https://github.com/VITA-Group/SinNeRF">code</a>
+      </p>
+    </ol>
+
     <h4> Conference Papers:</h4>
 
     <ol>
