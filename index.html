@@ -102,7 +102,7 @@
         <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
           I am a Ph.D. student in Electrical Engineering at The University of Texas at Austin advised by <a href="https://spark.adobe.com/page/CAdrFMJ9QeI2y/">Prof. Zhangyang Wang</a> at <a href="https://vita-group.github.io/">VITA group</a>.
           </br>
-          Previously, I was senior algorithm engineer at <a href="https://ailab.aliyun.com/">Alibaba Cloud</a> worked with <a href="https://scholar.google.com/citations?user=XhyKVFMAAAAJ&hl=en">Prof. Ping Tan</a> and <a href="https://sites.google.com/site/zhusiyucs/home">Siyu Zhu</a>.
+          Previously, I was a senior algorithm engineer at <a href="https://ailab.aliyun.com/">Alibaba Cloud</a> worked with <a href="https://scholar.google.com/citations?user=XhyKVFMAAAAJ&hl=en">Prof. Ping Tan</a> and <a href="https://sites.google.com/site/zhusiyucs/home">Siyu Zhu</a>.
           <!-- </br> -->
           <!-- I did my M.S. at school of information, <a href="https://www.xmu.edu.cn/">Xiamen University</a> supervised by Prof. <a href="https://informatics.xmu.edu.cn/info/1011/6625.htm">Xinghao Ding</a>. -->
   <!-- where I work on deep learning and computer vision, etc. -->
@@ -142,62 +142,59 @@
   <p class="w3-justify">
   </p>
   <h4><li>Neural Radiance Field</li></h4>
-      <img style="width:30%;" src="./images/sinnerf_lego.gif"> <img style="width:30%;" src="./images/ours_lego_inter.gif">  <img style="width:30%;" src="./images/ours_room.gif"> 
+      <img style="width:30%;" src="./images/sinnerf_lego.gif">  <img style="width:30%;" src="./images/ours_lego_inter.gif">  <img style="width:30%;" src="./images/ours_room.gif">
+      <figcaption>Fig1. Single-View Novel View Synthesis
+           &nbsp &nbsp &nbsp  &nbsp  Fig2. NeRF Stylization &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp Fig3. NeRF Stylization</figcaption>
+
       <p class="w3-justify">
         Synthesizing photo-realistic images has been one of the most essential goals in the area of computer vision.
         <br>
         <p>
-          <strong>NeRF Augmentations:</strong> NeRF often yields inconsistent and visually non-smooth geometric results due to the generalization gap between seen and unseen views. We propose to blend 
-          triple level worest-case perturbations to the NeRF training pipeline with physical grouds. In our <u>Aug-NeRF</u> paper, we effectively boosts NeRF accuracy in both novel view synthesis (up to 1.5dB
-          PSNR gain) and underlying geometry reconstruction.
+          <strong>NeRF Augmentations:</strong> In our <u>Aug-NeRF</u> paper, we propose to augment NeRF with worst-case perturbations in three distinct levels with physical grounds. They effectively boost NeRF in both novel view
+          synthesis (up to 1.5dB PSNR gain) and underlying geometry reconstruction.
          </p>
 
         <p>
-         <strong>Single view NeRF:</strong> NeRF is impeded by the stringent requirement of the dense views captured from multiple well-calibrated cameras, whereas it could be challenging or even infeasible to collect a sufficiently dense coverage of 
-        a scene. In our <u>SinNeRF</u> paper, We push the setting of sparse views to the extreme, by training a neural radiance field on only one view with depth information. 
-        By generating pseudo labels according to the available single view, the learned radiance field generate more satisfying synthesized results on novel views.
+         <strong>Single view NeRF:</strong> In our <u>SinNeRF</u> paper, we propose thoughtfully designed semantic and geometry
+         regularizations to train neural radiance field using only a single view.
         </p>
 
-        <strong>NeRF Stylizatation:</strong> In addtion to improve the synthesized image quality, in our <u>INS</u> paper, we conduct a pilot study for training stylized implicit representations (e.g., SIREN, NeRF, SDF) 
-        We propose to decouples the ordinary implicit function into a style implicit module and a content implicit module, in order to separately encode the representations from the style image and input
-        scene. An amalgamation module is then applied to aggregate these information and synthesize the stylized output. Consequently, we can synthesize faithful stylization for SIREN, NeRF and SDF. In addition, 
-        we can interpolate between different styles and generating images with new mixed style.
-      </p> 
+        <strong>INR Stylizatation:</strong> In our <u>INS</u> paper, we conduct a pilot study for training stylized implicit representations (e.g., SIREN, NeRF, SDF). We obtain faithful stylizations and can interpolate between different
+        styles to generate new mixed style.
+      </p>
 
-  
+
       <h4><li>CAD(computer-aided design) Drawing Symbol Spotting</li></h4>
-      <img style="width:96%;" src="images/floorplan_annotation.png"> 
-      <p class="w3-justify"> 
+      <img style="width:96%;" src="images/floorplan_annotation.png">
+      <p class="w3-justify">
       <a style="color: #447ec9" href="https://floorplancad.github.io/">Project Page</a> and <a style="color: #447ec9" href="https://www.aliyun.com/product/ai/HoloWatcher_Introduction">Product Page</a>
       </p>
       <p class="w3-justify">
         CAD symbol spotting can be use in architecture, engineering and construction (AEC) industries to accelerate the efficiency of 3D modeling from CAD drawings.
         <br>
-        We release the first large-scale real-world dataset of over 15,000 CAD drawings with line-grained annotations (35 classes), covering various types of builds. 
+        We release the first large-scale real-world dataset of over 10,000 CAD drawings with line-grained annotations (35 classes), covering various types of builds.
         We introduce the new task of <span style="color:red">Panoptic Symbol Spotting</span>, which is a relaxation of the traditional symbol spotting problem. It spots
         and parse both countable object instances (windows, doors, tables, etc.) and uncountable stuff (wall, railing, etc.) from CAD drawings,
-        Moreover, we propose the Panoptic Quality (PQ) as the evaluation criteria of panotic symbol spotting results. 
+        Moreover, we propose the Panoptic Quality (PQ) as the evaluation criteria of panotic symbol spotting results.
         <br>
-        To tackle the new proposed problem, we first present a CNN-GCN method in our <a href=https://arxiv.org/abs/2105.07147>ICCV2021</a> which unified a GCN head and a detection head for semantic and instance symbol spotting respectively. 
-        Recently, we present a transformer-based framework named <span style="color:red">CADTransformer</span>, in our CVPR2022, by painlessly modifying existing vision transformer (ViT)
-        backbones to tackle the panoptic symbol spotting task. The PQ is boosted from 0.595 in the GCN-CNN based methods to a new state-of-the-art <span style="color:red">0.685</span>.
-      </p> 
+        We present a CNN-GCN method in our <a href=https://arxiv.org/abs/2105.07147><u>ICCV2021</u></a> which unified a GCN head and a detection head for semantic and instance symbol spotting respectively.
+        Then, we present a transformer-based framework named <a href=https://openaccess.thecvf.com/content/CVPR2022/papers/Fan_CADTransformer_Panoptic_Symbol_Spotting_Transformer_for_CAD_Drawings_CVPR_2022_paper.pdf><u>CADTransormer (CVPR2022)</u></a>,
+        by painlessly modifying existing vision transformer (ViT)
+        backbones.
+      </p>
 
       <h4><li>Efficient Multi-view Stereo and Stereo Matching</li></h4>
-      <img style="width:96%;" src="images/cascade_costvolume_teaser.jpg"> 
+      <img style="width:96%;" src="images/cascade_costvolume_teaser.jpg">
       <p class="w3-justify">
       <!-- <a style="color: #447ec9" href="https://live.huawei.com/huaweiconnect/meeting/cn/5872.html">Huawei Connect (HC) 2020</a> | <a style="color: #447ec9" href="https://www.mindspore.cn/resources/hub">MindSpore Hub</a> -->
       </p>
       <p class="w3-justify">
-        To tackle the high computaitonal cost of the existing cost volume-based deep MVS and stereo matching methods, we propose a memory and run time efficient cost volume formulation 
-        which is built upon a standard feature pyramid encoding geometry and context at gradually finer scales. 
-        Within our new design, We narrow the depth (or disparity) range of each stage by the depth (or disparity) map from the previous stage to recover the output in a coarser to fine manner.<br>
-        By applying the cascade cost volume to the representative MVS-Net, and obtain a <span style="color:red">23.1%</span> improvement on
+        To tackle the high computaitonal cost of the existing cost volume-based deep MVS and stereo matching methods, we propose Cas-MVSNet and Cas-StereoNet.
+        By formulating cost volume in a coarse to fine manner, we obtain a <span style="color:red">23.1%</span> improvement on
         <a href=http://roboimagedata.compute.dtu.dk/?page_id=36>DTU dataset</a>  with <span style="color:red">50.6%</span> and <span style="color:red">74.2%</span> reduction in GPU memory and run-time.
         It is also rank 1st within all learning-based methods on <a href=https://www.tanksandtemples.org/>Tanks and Temples benchmark</a>.
-        In addition, we adapt GwcNet with our proposed cost volume design, and the accuracy ranking rises from 29 to 17 with <span style="color:red">37.0%</span> memory reduction on
-        <a href=http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo>KITTI 2015 test set</a>. See<a href=https://arxiv.org/abs/1912.06378> CVPR2020</a> for more details.
-      </p> 
+        See<a href=https://arxiv.org/abs/1912.06378> CVPR2020</a> for more details.
+      </p>
 
       <h4><li>Compressed Sensing MRI and Image Deraining</li></h4>
       <p class="w3-justify">
@@ -205,18 +202,18 @@
       </p>
       <p class="w3-justify">
         I have also worked on low-level computer vision tasks (e.g. Compressed Sensing MRI and Single Image Deraining) using Deep Neural Network before the year 2019.
-        See <a style="color: #447ec9" href="https://arxiv.org/abs/1805.02165">IPMI2019</a>,  
+        See <a style="color: #447ec9" href="https://arxiv.org/abs/1805.02165">IPMI2019</a>,
         <a style="color: #447ec9" href="https://arxiv.org/abs/1804.07493">ACM MM2019</a>,
         <a style="color: #447ec9" href="https://openaccess.thecvf.com/content_ECCV_2018/html/Zhiwen_Fan_A_Segmentation-aware_Deep_ECCV_2018_paper.html">ECCV 2018</a>,
-        <a style="color: #447ec9" href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewPaper/16546">AAAI 2018</a> and 
+        <a style="color: #447ec9" href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewPaper/16546">AAAI 2018</a> and
         <a style="color: #447ec9" href="https://ieeexplore.ieee.org/abstract/document/8758456/">TIP 2019</a>,
         <a style="color: #447ec9" href="https://www.sciencedirect.com/science/article/abs/pii/S0730725X19301870">MRI 2019</a>,
         <a style="color: #447ec9" href="https://www.sciencedirect.com/science/article/abs/pii/S0730725X1830674X">MRI 2019</a> for details.
-      </p> 
+      </p>
 
 </div>
 
-  
+
   <!-- The Talks Section -->
   <!-- <div class="w3-container w3-light-grey w3-padding-32" id="talks">
     <h2>Talks</h2>
@@ -226,13 +223,13 @@
 
  <!-- The Publications Section -->
   <div class="w3-container w3-padding-32"" id="publications">
-    <h2>Research</h2>
+    <h2>Publications</h2>
       <p class="w3-left-align" style="line-height:200%">
-        I'm interested in devleoping <strong>Neural Radiance Field</strong>, <strong>Efficient 3D Models</strong>, <strong>Graph Neural Networks</strong> for vector graphics and 3D data and <strong>Low-level Computer Vision</strong>.
+        I'm interested in devleoping <strong>Implicit Neural Representations</strong>, <strong>Efficient 3D Reconstruction</strong>, <strong>Transformer Models</strong> and <strong>Low-level Computer Vision</strong>.
       </p>
-    
+
     <!-- <h4> Arxiv Submissions:</h4> -->
-    
+
 
     <h4> Conference Papers:</h4>
 
@@ -240,7 +237,7 @@
       <p>
         <li><strong>Unified Implicit Neural Stylization</strong>
         <br>
-        <strong>Zhiwen Fan*</strong> <font color=#caccd1>, Yifan Jiang*, Peihao Wang*, Xinyu Gong, Dejia Xu, Zhangyang Wang.</font>
+        <strong>Zhiwen Fan*</strong>, Yifan Jiang*, Peihao Wang*, Xinyu Gong, Dejia Xu, Zhangyang Wang.
         <br>
         <em>ECCV</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/2204.01943">paper</a>  | <a style="color: #447ec9" href="https://zhiwenfan.github.io/INS/">project page</a>| <a style="color: #447ec9" href="https://github.com/VITA-Group/INS">code</a>
       </p>
@@ -248,7 +245,7 @@
       <p>
         <li><strong>SinNeRF: Training Neural Radiance Fields on Complex Scenes from a Single Image</strong>
         <br>
-        <font color=#caccd1>Dejia Xu*, Yifan Jiang*, Peihao Wang,</font> <strong>Zhiwen Fan</strong><font color=#caccd1>, Humphrey Shi, Zhangyang Wang.</font>
+       Dejia Xu*, Yifan Jiang*, Peihao Wang, <strong>Zhiwen Fan</strong>, Humphrey Shi, Zhangyang Wang.
         <br>
         <em>ECCV</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/2204.00928">paper</a>  | <a style="color: #447ec9" href="https://vita-group.github.io/SinNeRF/">project page</a>| <a style="color: #447ec9" href="https://github.com/VITA-Group/SinNeRF">code</a>
       </p>
@@ -256,30 +253,30 @@
     <p>
       <li><strong>Point Cloud Domain Adaptation via Masked Local 3D Structure Prediction</strong>
       <br>
-      <font color=#caccd1>Hanxue Liang , Hehe Fan,</font> <strong>Zhiwen Fan</strong><font color=#caccd1>, Yi Wang, Tianlong Chen, Yu Cheng, Zhangyang Wang.</font>
+     Hanxue Liang , Hehe Fan, <strong>Zhiwen Fan</strong>, Yi Wang, Tianlong Chen, Yu Cheng, Zhangyang Wang.
       <br>
-      <em>ECCV</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/TBD">paper</a>  | <a style="color: #447ec9" href="https://vita-group.github.io/TBD/">project page</a>| <a style="color: #447ec9" href="https://github.com/VITA-Group/TBD">code</a>
+      <em>ECCV</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/TBD">paper</a>  | <a style="color: #447ec9" href="https://github.com/VITA-Group/MLSP">code</a>
     </p>
 
       <p>
         <li><strong>Neural Implicit Dictionary Learning via Mixture-of-Expert Training</strong>
         <br>
-        <font color=#caccd1>Peihao Wang,</font> <strong>Zhiwen Fan</strong><font color=#caccd1>, Tianlong Chen, Zhangyang Wang.</font>
+       Peihao Wang, <strong>Zhiwen Fan</strong>, Tianlong Chen, Zhangyang Wang.
         <br>
         <em>ICML</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/tbd">paper</a>  |  <a style="color: #447ec9" href="https://github.com/VITA-Group/tbd">code</a>
       </p>
-      
+
       <p>
         <li><strong>CADTransformer: Panoptic Symbol Spotting Transformer for CAD Drawings</strong>
         <br>
-        <strong>Zhiwen Fan</strong><font color=#caccd1>, Tianlong Chen, Peihao Wang, Zhangyang Wang</font>
+        <strong>Zhiwen Fan</strong>, Tianlong Chen, Peihao Wang, Zhangyang Wang
         <br>
         <em>CVPR</em> 2022 <strong> (Oral Presentation) </strong> | <a style="color: #447ec9" href="https://openaccess.thecvf.com/content/CVPR2022/html/Fan_CADTransformer_Panoptic_Symbol_Spotting_Transformer_for_CAD_Drawings_CVPR_2022_paper.html">paper</a> | <a style="color: #447ec9" href="https://github.com/VITA-Group/CADTransformer">code</a>
       </p>
       <p>
         <li><strong>Aug-NeRF: Training Stronger Neural Radiance Fields with Triple-Level Augmentations</strong>
         <br>
-        <font color=#caccd1>Tianlong Chen, Peihao Wang, </font><strong>Zhiwen Fan</strong><font color=#caccd1>, Zhangyang Wang</font>
+       Tianlong Chen, Peihao Wang, <strong>Zhiwen Fan</strong>, Zhangyang Wang
         <br>
         <em>CVPR</em> 2022 | <a style="color: #447ec9" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Aug-NeRF_Training_Stronger_Neural_Radiance_Fields_With_Triple-Level_Physically-Grounded_Augmentations_CVPR_2022_paper.pdf">paper</a> | <a style="color: #447ec9" href="https://github.com/VITA-Group/Aug-NeRF">code</a>
       </p>
@@ -287,14 +284,14 @@
       <p>
         <li><strong>MeshMVS: Multi-View Stereo Guided Mesh Reconstruction</strong>
         <br>
-        <font color=#caccd1>Rakesh Shrestha, </font><strong>Zhiwen Fan</strong><font color=#caccd1>, Qingkun Su, Zuozhuo Dai, Siyu Zhu, Ping Tan</font>
+       Rakesh Shrestha, <strong>Zhiwen Fan</strong>, Qingkun Su, Zuozhuo Dai, Siyu Zhu, Ping Tan
         <br>
         <em>3DV</em> 2021 | <a style="color: #447ec9" href="https://arxiv.org/abs/2010.08682">paper</a> | <a style="color: #447ec9" href="https://github.com/rakeshshrestha31/meshmvs">code</a>
       </p>
       <p>
       <li><strong>FloorPlanCAD: A Large-Scale CAD Drawing Dataset for Panoptic Symbol Spotting</strong>
       <br>
-      <strong>Zhiwen Fan*</strong>, <font color=#caccd1>Lingjie Zhu*, Honghua Li, Xiaohao Chen, Siyu Zhu, Ping Tan</font>
+      <strong>Zhiwen Fan*</strong>,Lingjie Zhu*, Honghua Li, Xiaohao Chen, Siyu Zhu, Ping Tan
       <br>
       <em>ICCV</em> 2021 | <a style="color: #447ec9" href="https://arxiv.org/abs/2105.07147">paper</a> | <a style="color: #447ec9" href="images/floorplancad_poster.pdf">poster</a> | <a style="color: #447ec9" href="https://www.youtube.com/watch?v=bAW0mjVH7us">video</a>
       </p>
@@ -302,7 +299,7 @@
       <p>
       <li><strong>Cascade Cost Volume for High-Resolution Multi-View Stereo and Stereo Matching</strong>
       <br>
-      <strong>Zhiwen Fan*</strong><font color=#caccd1>, Xiaodong Gu*, Siyu Zhu, Zuozhuo Dai, Feitong Tan, Ping Tan</font>
+      <strong>Zhiwen Fan*</strong>, Xiaodong Gu*, Siyu Zhu, Zuozhuo Dai, Feitong Tan, Ping Tan
       <br>
       <em>CVPR</em> 2020 <strong> (Oral Presentation) </strong> | <a style="color: #447ec9" href="https://arxiv.org/abs/1912.06378">paper</a> | <a style="color: #447ec9" href="https://github.com/alibaba/cascade-stereo">code</a> | <a style="color: #447ec9" href="https://www.youtube.com/watch?v=rcJiRQqDKbo">video</a>
       </p>
@@ -310,7 +307,7 @@
       <p>
       <li><strong>Joint CS-MRI reconstruction and segmentation with a unified deep network</strong>
       <br>
-      <strong>Zhiwen Fan*</strong>, <font color=#caccd1>Liyan Sun*, Xinghao Ding, Yue Huang, John Paisley</font>
+      <strong>Zhiwen Fan*</strong>,Liyan Sun*, Xinghao Ding, Yue Huang, John Paisley
       <br>
       <em>IPMI</em> 2019 | <a style="color: #447ec9" href="https://arxiv.org/abs/1805.02165">paper</a>
       </p>
@@ -318,15 +315,15 @@
       <p>
       <li><strong>Residual-guide network for single image deraining</strong>
       <br>
-      <strong>Zhiwen Fan*</strong><font color=#caccd1>, Huafeng Wu*, Xueyang Fu, Yue Huang, Xinghao Ding</font>
+      <strong>Zhiwen Fan*</strong>, Huafeng Wu*, Xueyang Fu, Yue Huang, Xinghao Ding
       <br>
-      <em>ACM MM</em> 2019 | <a style="color: #447ec9" href="https://arxiv.org/abs/1804.07493">paper</a> 
+      <em>ACM MM</em> 2019 | <a style="color: #447ec9" href="https://arxiv.org/abs/1804.07493">paper</a>
       </p>
 
       <p>
       <li><strong>A Segmentation-aware Deep Fusion Network for Compressed Sensing MRI</strong>
       <br>
-      <strong>Zhiwen Fan*</strong><font color=#caccd1>, Liyan Sun*, Xinghao Ding, Yue Huang, Congbo Cai, John Paisley</font>
+      <strong>Zhiwen Fan*</strong>, Liyan Sun*, Xinghao Ding, Yue Huang, Congbo Cai, John Paisley
       <br>
       <em>ECCV</em> 2018 | <a style="color: #447ec9" href="https://openaccess.thecvf.com/content_ECCV_2018/html/Zhiwen_Fan_A_Segmentation-aware_Deep_ECCV_2018_paper.html">paper</a>
       </p>
@@ -334,17 +331,17 @@
       <p>
       <li><strong>Compressed Sensing MRI Using a Recursive Dilated Network</strong>
       <br>
-      <strong>Zhiwen Fan*</strong><font color=#caccd1>, Liyan Sun*, Yue Huang, Xinghao Ding, John Paisley</font>
+      <strong>Zhiwen Fan*</strong>, Liyan Sun*, Yue Huang, Xinghao Ding, John Paisley
       <br>
-      <em>AAAI</em> 2018 (* equal contribution) | <a style="color: #447ec9" href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewPaper/16546">paper</a> 
+      <em>AAAI</em> 2018 (* equal contribution) | <a style="color: #447ec9" href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewPaper/16546">paper</a>
       </p>
 
       <p>
       <li><strong>Two-step approach for single underwater image enhancement</strong>
       <br>
-      <font color=#caccd1>Xueyang Fu, </font><strong>Zhiwen Fan</strong><font color=#caccd1>, Mei Ling, Yue Huang, Xinghao Ding</font>
+     Xueyang Fu, <strong>Zhiwen Fan</strong>, Mei Ling, Yue Huang, Xinghao Ding
       <br>
-      <em>ISPACS</em> 2017 | <a style="color: #447ec9" href="https://ieeexplore.ieee.org/abstract/document/8266583/">paper</a> 
+      <em>ISPACS</em> 2017 | <a style="color: #447ec9" href="https://ieeexplore.ieee.org/abstract/document/8266583/">paper</a>
       </p>
       </ol>
 
@@ -355,15 +352,15 @@
       <p>
       <li><strong>A deep information sharing network for multi-contrast compressed sensing MRI reconstruction</strong>
       <br>
-      <font color=#caccd1>Liyan Sun, </font><strong>Zhiwen Fan</strong><font color=#caccd1>, Xueyang Fu, Yue Huang, Xinghao Ding, John Paisley</font>
+     Liyan Sun, <strong>Zhiwen Fan</strong>, Xueyang Fu, Yue Huang, Xinghao Ding, John Paisley
       <br>
       <em>IEEE TIP</em> 2019 |<a style="color: #447ec9" href="https://ieeexplore.ieee.org/abstract/document/8758456/">paper</a>
       </p>
-  
+
       <p>
       <li><strong>Region-of-interest undersampled MRI reconstruction: A deep convolutional neural network approach</strong>
       <br>
-      <font color=#caccd1>Liyan Sun, </font><strong>Zhiwen Fan</strong><font color=#caccd1>, Xinghao Ding, Yue Huang, John Paisley</font>
+     Liyan Sun, <strong>Zhiwen Fan</strong>, Xinghao Ding, Yue Huang, John Paisley
       <br>
       <em>Magnetic resonance imaging</em> 2019 | <a style="color: #447ec9" href="https://www.sciencedirect.com/science/article/abs/pii/S0730725X19301870">paper</a>
       </p>
@@ -371,7 +368,7 @@
       <p>
       <li><strong>A divide-and-conquer approach to compressed sensing MRI</strong>
       <br>
-      <font color=#caccd1>Liyan Sun, </font><strong>Zhiwen Fan</strong><font color=#caccd1>, Xinghao Ding, Congbo Cai, Yue Huang, John Paisley</font>
+     Liyan Sun, <strong>Zhiwen Fan</strong>, Xinghao Ding, Congbo Cai, Yue Huang, John Paisley
       <br>
       <em>Magnetic resonance imaging</em> 2019 | <a style="color: #447ec9" href="https://www.sciencedirect.com/science/article/abs/pii/S0730725X1830674X">paper</a>
       </p>
@@ -394,7 +391,7 @@
 
   <div class="w3-container w3-padding-32" id="service">
     <h2>Experience</h2>
-    
+
     <div class="media">
       <div class="media-left">
           <img class="media-object" style="width:64px;" src="./images/google-1.jpg" alt="GOOGLE">
@@ -402,7 +399,7 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading">Google, San Francisco, US</h4>
-        <p>Research Intern<br>05/2022--08/2022</p>
+        <p>Research Intern<br>05/2022--present</p>
       </div>
 
       <div class="media">
@@ -440,11 +437,12 @@
   <div class="w3-container w3-padding-32" id="award">
     <h2>Awards</h2>
     <p><li> 2022, 3rd place of University Demo Best Demonstration at 59th Design Automation Conference</a></p>
+    <p><li> 2022, Professional Development Award of UT Austin</a></p>
     <p><li> 2019, Outstanding Graduates of Xiamen University</a></p>
     <p><li> 2017 The First Prize Scholarship of Xiamen University</p>
     <p><li> 2016 The First Prize Scholarship of Xiamen University</p>
     <p><li> 2016, Outstanding Graduates of Shandong Provience</p>
-  </div>  
+  </div>
 
   <div class="w3-light-grey w3-center w3-padding-24">
 
@@ -454,7 +452,7 @@
 </div>
 
 <script>
-// Accordion 
+// Accordion
 function myAccFunc() {
   var x = document.getElementById("demoAcc");
   if (x.className.indexOf("w3-show") == -1) {
@@ -473,7 +471,7 @@ function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
 }
- 
+
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
