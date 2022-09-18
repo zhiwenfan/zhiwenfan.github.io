@@ -119,6 +119,7 @@
 <!-- The News Section -->
 <div class="w3-container w3-light-grey w3-padding-32" id="news">
   <h2>News</h2>
+     <p></p><li> 09/2022, two papers have been accepted by <a href="https://nips.cc/">NeurIPS 2022</a>.</li><p></p>
      <p></p><li> 08/2022, we won Qualcomm Innovation Fellowship (North America) 2022 <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/2022-north-america">(QIF 2022)</a>.</li><p></p>
      <p></p><li> 07/2022, we won 3rd place of University Demo Best Demonstration at 59th Design Automation Conference <a href="https://www.dac.com/">(DAC 2022)</a>.</li><p></p>
      <p></p><li> 07/2022, three papers have been accepted by <a href="https://eccv2022.ecva.net/">ECCV 2022</a>.</li><p></p>
@@ -142,27 +143,44 @@
   <h2>Recent Projects</h2>
   <p class="w3-justify">
   </p>
-  <h4><li>Neural Radiance Field</li></h4>
+  <h4><li>Implicit Neural Representation</li></h4>
       <img style="width:30%;" src="./images/sinnerf_lego.gif">  <img style="width:30%;" src="./images/ours_lego_inter.gif">  <img style="width:30%;" src="./images/ours_room.gif">
       <figcaption>Fig1. Single-View Novel View Synthesis
            &nbsp &nbsp &nbsp  &nbsp  Fig2. NeRF Stylization &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp Fig3. NeRF Stylization</figcaption>
 
       <p class="w3-justify">
-        Synthesizing photo-realistic images has been one of the most essential goals in the area of computer vision.
-        <br>
+        <strong>INR editing:</strong> In our <u>INS</u> paper, we conduct a pilot study for training stylized implicit representations (e.g., SIREN, NeRF, SDF). We obtain faithful stylizations and can interpolate between different
+        styles to generate new mixed style. In our <u>INR-DSP</u> paper, we propose a theoretically grounded signal processing framework for Implicit Neural Representations (INR), which analytically manipulates INRs on the weight space through differential operators.
+        </p>
+
         <p>
-          <strong>NeRF Augmentations:</strong> In our <u>Aug-NeRF</u> paper, we propose to augment NeRF with worst-case perturbations in three distinct levels with physical grounds. They effectively boost NeRF in both novel view
-          synthesis (up to 1.5dB PSNR gain) and underlying geometry reconstruction.
+          <strong>Sparse view NeRF:</strong> In our <u>SinNeRF</u> paper, we propose thoughtfully designed semantic and geometry
+          regularizations to train neural radiance field using only a single view.
          </p>
 
         <p>
-         <strong>Single view NeRF:</strong> In our <u>SinNeRF</u> paper, we propose thoughtfully designed semantic and geometry
-         regularizations to train neural radiance field using only a single view.
-        </p>
+          <strong>NeRF augmentations:</strong> In our <u>Aug-NeRF</u> paper, we propose to augment NeRF with worst-case perturbations in three distinct levels with physical grounds. They effectively boost NeRF in both novel view
+          synthesis (up to 1.5dB PSNR gain) and underlying geometry reconstruction.
+         </p>
 
-        <strong>INR Stylizatation:</strong> In our <u>INS</u> paper, we conduct a pilot study for training stylized implicit representations (e.g., SIREN, NeRF, SDF). We obtain faithful stylizations and can interpolate between different
-        styles to generate new mixed style.
+
+
+      <h4><li> Efficient MVS and MTL</li></h4>
+      <img style="width:96%;" src="images/cascade_costvolume_teaser.jpg">
+      <p class="w3-justify">
+      <!-- <a style="color: #447ec9" href="https://live.huawei.com/huaweiconnect/meeting/cn/5872.html">Huawei Connect (HC) 2020</a> | <a style="color: #447ec9" href="https://www.mindspore.cn/resources/hub">MindSpore Hub</a> -->
       </p>
+      <p class="w3-justify">
+        <strong>Efficient MVS:</strong> We propose Cas-MVSNet and Cas-StereoNet, by formulating cost volume in a coarse to fine manner. We obtain a <span style="color:red">23.1%</span> improvement on
+        <a href=http://roboimagedata.compute.dtu.dk/?page_id=36>DTU dataset</a>  with <span style="color:red">50.6%</span> and <span style="color:red">74.2%</span> reduction in GPU memory and run-time.
+        It is also rank 1st within all learning-based methods on <a href=https://www.tanksandtemples.org/>Tanks and Temples benchmark</a>.
+        See<a href=https://arxiv.org/abs/1912.06378> CVPR2020</a> for more details.
+
+        <br>
+        <strong>Efficient MTL:</strong> In our M^3$-ViT paper, we propose to activate any task of interest, by integrating mixture-of-experts (MoE) layers into a ViT backbone, along with hardware-level innovations.
+         M^3-ViT reduce the memory by 2.4x, saving 9.23x energy, on PASCAL-Context and NYUD-v2 datasets.
+      </p>
+
 
 
       <h4><li>CAD(computer-aided design) Drawing Symbol Spotting</li></h4>
@@ -178,23 +196,10 @@
         and parse both countable object instances (windows, doors, tables, etc.) and uncountable stuff (wall, railing, etc.) from CAD drawings,
         Moreover, we propose the Panoptic Quality (PQ) as the evaluation criteria of panotic symbol spotting results.
         <br>
-        We present a CNN-GCN method in our <a href=https://arxiv.org/abs/2105.07147><u>ICCV2021</u></a> which unified a GCN head and a detection head for semantic and instance symbol spotting respectively.
-        Then, we present a transformer-based framework named <a href=https://openaccess.thecvf.com/content/CVPR2022/papers/Fan_CADTransformer_Panoptic_Symbol_Spotting_Transformer_for_CAD_Drawings_CVPR_2022_paper.pdf><u>CADTransormer (CVPR2022)</u></a>,
-        by painlessly modifying existing vision transformer (ViT)
-        backbones.
-      </p>
-
-      <h4><li>Efficient Multi-view Stereo and Stereo Matching</li></h4>
-      <img style="width:96%;" src="images/cascade_costvolume_teaser.jpg">
-      <p class="w3-justify">
-      <!-- <a style="color: #447ec9" href="https://live.huawei.com/huaweiconnect/meeting/cn/5872.html">Huawei Connect (HC) 2020</a> | <a style="color: #447ec9" href="https://www.mindspore.cn/resources/hub">MindSpore Hub</a> -->
-      </p>
-      <p class="w3-justify">
-        To tackle the high computaitonal cost of the existing cost volume-based deep MVS and stereo matching methods, we propose Cas-MVSNet and Cas-StereoNet.
-        By formulating cost volume in a coarse to fine manner, we obtain a <span style="color:red">23.1%</span> improvement on
-        <a href=http://roboimagedata.compute.dtu.dk/?page_id=36>DTU dataset</a>  with <span style="color:red">50.6%</span> and <span style="color:red">74.2%</span> reduction in GPU memory and run-time.
-        It is also rank 1st within all learning-based methods on <a href=https://www.tanksandtemples.org/>Tanks and Temples benchmark</a>.
-        See<a href=https://arxiv.org/abs/1912.06378> CVPR2020</a> for more details.
+        <strong>PanCADNet:</strong> We present a CNN-GCN method in our <a href=https://arxiv.org/abs/2105.07147><u>ICCV2021</u></a> which unified a GCN head and a detection head for semantic and instance symbol spotting respectively.
+        <br>
+        <strong>CADTransformer:</strong> We present a transformer-based framework named <a href=https://openaccess.thecvf.com/content/CVPR2022/papers/Fan_CADTransformer_Panoptic_Symbol_Spotting_Transformer_for_CAD_Drawings_CVPR_2022_paper.pdf><u>CADTransormer (CVPR2022)</u></a>,
+        by painlessly modifying existing vision transformer (ViT) backbones.
       </p>
 
       <h4><li>Compressed Sensing MRI and Image Deraining</li></h4>
@@ -235,6 +240,24 @@
     <h4> Conference Papers:</h4>
 
     <ol>
+
+      <p>
+        <li><strong>M^3ViT: Mixture-of-Experts Vision Transformer for Efficient Multi-task Learning with Model-Accelerator Co-design</strong>
+        <br>
+        <strong>Zhiwen Fan*</strong>, Hanxue Liang*, Rishov Sarkar, Ziyu Jiang, Tianlong Chen, Kai Zou, Yu Cheng, Cong Hao, Zhangyang Wang,
+        <br>
+        <em>NeurIPS</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/TBD">paper</a> | <a style="color: #447ec9" href="https://github.com/VITA-Group/TBD">code</a>
+      </p>
+
+      <p>
+        <li><strong>Signal Processing for Implicit Neural Representations</strong>
+        <br>
+       Dejia Xu*, Peihao Wang*, Yifan Jiang, <strong>Zhiwen Fan</strong>, Zhangyang Wang.
+        <br>
+        <em>NeurIPS</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/TBD">paper</a> | <a style="color: #447ec9" href="https://github.com/VITA-Group/TBD">code</a>
+      </p>
+
+
       <p>
         <li><strong>Unified Implicit Neural Stylization</strong>
         <br>
@@ -254,7 +277,7 @@
     <p>
       <li><strong>Point Cloud Domain Adaptation via Masked Local 3D Structure Prediction</strong>
       <br>
-     Hanxue Liang , Hehe Fan, <strong>Zhiwen Fan</strong>, Yi Wang, Tianlong Chen, Yu Cheng, Zhangyang Wang.
+     Hanxue Liang, Hehe Fan, <strong>Zhiwen Fan</strong>, Yi Wang, Tianlong Chen, Yu Cheng, Zhangyang Wang.
       <br>
       <em>ECCV</em> 2022| <a style="color: #447ec9" href="https://arxiv.org/abs/TBD">paper</a>  | <a style="color: #447ec9" href="https://github.com/VITA-Group/MLSP">code</a>
     </p>
@@ -277,7 +300,7 @@
       <p>
         <li><strong>Aug-NeRF: Training Stronger Neural Radiance Fields with Triple-Level Augmentations</strong>
         <br>
-       Tianlong Chen, Peihao Wang, <strong>Zhiwen Fan</strong>, Zhangyang Wang
+       Tianlong Chen*, Peihao Wang*, <strong>Zhiwen Fan</strong>, Zhangyang Wang
         <br>
         <em>CVPR</em> 2022 | <a style="color: #447ec9" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Aug-NeRF_Training_Stronger_Neural_Radiance_Fields_With_Triple-Level_Physically-Grounded_Augmentations_CVPR_2022_paper.pdf">paper</a> | <a style="color: #447ec9" href="https://github.com/VITA-Group/Aug-NeRF">code</a>
       </p>
@@ -422,8 +445,8 @@
     <h2>Services</h2>
       <!-- <p><li> Area Chair of <a href="https://icml.cc/Conferences/2021">ICML 2021</a>, <a href="https://nips.cc/Conferences/2021/">NeurIPS 2021</a>.</p> -->
       <!-- <p><li> Senior Program Committee Members of <a href="https://ijcai-21.org/">IJCAI 2021</a>, <a href="https://www.ijcai20.org/">IJCAI 2020</a> and <a href="https://www.ijcai19.org/program-committee.html">IJCAI 2019</a>.</p> -->
-      <p><li> Journal Reviewers of IJCV, Neurocomputing</p>
-      <p><li> Conference Reviewers of ICML 2022, CVPR 2022, ICCV 2021, AAAI 2021, ICME 2019</p>
+      <p><li> Journal Reviewers of TPAMI, TIP, IJCV, Neurocomputing</p>
+      <p><li> Conference Reviewers of NeurIPS 2022, ICML 2022, CVPR 2022, ICCV 2021, AAAI 2021, ICME 2019</p>
   </div>
 
 
