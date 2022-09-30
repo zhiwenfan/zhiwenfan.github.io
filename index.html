@@ -144,9 +144,9 @@
   <p class="w3-justify">
   </p>
   <h4><li>Implicit Neural Representation</li></h4>
-      <img style="width:30%;" src="./images/sinnerf_lego.gif">  <img style="width:30%;" src="./images/ours_lego_inter.gif">  <img style="width:30%;" src="./images/ours_room.gif">
-      <figcaption>Fig1. Single-View Novel View Synthesis
-           &nbsp &nbsp &nbsp  &nbsp  Fig2. NeRF Stylization &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp Fig3. NeRF Stylization</figcaption>
+      <img style="width:23%;" src="./images/ours_lego_inter.gif">  <img style="width:23%;" src="./images/flower_rgb.gif"> <img style="width:23%;" src="./images/flower_seg.gif"> <img style="width:23%;" src="./images/sinnerf_lego.gif">
+      <figcaption>  &nbsp &nbsp Fig1. INS(INR Stylization) &nbsp &nbsp &nbsp &nbsp &nbsp Fig2. NeRF-SOS(RGB).  &nbsp &nbsp &nbsp &nbsp  &nbsp  Fig3. NeRF-SOS(Seg).  &nbsp &nbsp &nbsp &nbsp  &nbsp  Fig4. Single-View NeRF
+      </figcaption>
 
       <p class="w3-justify">
         <strong>INR editing:</strong> In our <a style="color: #447ec9" href="https://arxiv.org/abs/2204.01943">INS</a> paper, we conduct a pilot study for training stylized implicit representations (e.g., SIREN, NeRF, SDF). We obtain faithful stylizations and can interpolate between different
@@ -155,13 +155,12 @@
         </p>
 
         <p>
-          <strong>Sparse view NeRF:</strong> In our <u>SinNeRF</u> paper, we propose thoughtfully designed semantic and geometry
+          <strong>Sparse view NeRF:</strong> In our  <a style="color: #447ec9" href="https://arxiv.org/abs/2204.00928"><u>SinNeRF</u></a> paper, we propose thoughtfully designed semantic and geometry
           regularizations to train neural radiance field using only a single view.
          </p>
 
         <p>
-          <strong>NeRF with augmentations:</strong> In our <u>Aug-NeRF</u> paper, we propose to augment NeRF with worst-case perturbations in three distinct levels with physical grounds. They effectively boost NeRF in both novel view
-          synthesis (up to 1.5dB PSNR gain) and underlying geometry reconstruction.
+          <strong>NeRF with augmentations:</strong> In our  <a style="color: #447ec9" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Aug-NeRF_Training_Stronger_Neural_Radiance_Fields_With_Triple-Level_Physically-Grounded_Augmentations_CVPR_2022_paper.pdf"><u>Aug-NeRF</u></a>  paper, we propose to augment NeRF with worst-case perturbations in three distinct levels with physical grounds.
          </p>
 
 
