@@ -103,6 +103,8 @@
 .publication_image__full_size video,
 .publication_image_0dot7_size img,
 .publication_image_0dot7_size video,
+.publication_image_0dot9_size img,
+.publication_image_0dot9_size video,
 
 publication_image_0dot7_size
 .publication_info__kLRGP {
@@ -204,6 +206,11 @@ publication_image_0dot7_size
 
     .publication_image_0dot7_size {
         width: 70%;
+        padding: .5rem 1rem 0 1rem; /* Sets equal padding on the left and right */
+    }
+
+    .publication_image_0dot9_size {
+        width: 90%;
         padding: .5rem 1rem 0 1rem; /* Sets equal padding on the left and right */
     }
 
